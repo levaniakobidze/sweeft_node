@@ -1,0 +1,39 @@
+{
+  "name": "sweeft_node",
+  "version": "1.0.0",
+  "description": "Sweeft - II step application",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build:watch": "babel src --out-dir build --extensions .ts --copy-files --watch",
+    "start": "node build/server.js",
+    "build:watch-save": "babel src --out-dir build --extensions .ts --copy-files --watch",
+    "build:prod": "babel src --out-dir build --extensions .ts --copy-files --minified",
+    "dev": "concurrently \"npm run build:watch\" \"nodemon build/server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levaniakobidze/sweeft_node.git"
+  },
+  "author": "Levan Iakobidze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levaniakobidze/sweeft_node/issues"
+  },
+  "homepage": "https://github.com/levaniakobidze/sweeft_node#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.22.15",
+    "@babel/core": "^7.22.20",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-typescript": "^7.22.15",
+    "concurrently": "^8.2.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
